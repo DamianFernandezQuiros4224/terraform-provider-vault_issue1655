@@ -42,7 +42,7 @@ func GetAWSLoginSchemaResource(authField string) *schema.Resource {
 				Optional:     true,
 				Description:  `The AWS secret access key.`,
 				DefaultFunc:  schema.EnvDefaultFunc("AWS_SECRET_ACCESS_KEY", nil),
-				RequiredWith: []string{fmt.Sprintf("%s.0.%s", authField, consts.FieldAWSAccessKeyID)},
+//				RequiredWith: []string{fmt.Sprintf("%s.0.%s", authField, consts.FieldAWSAccessKeyID)},
 			},
 			consts.FieldAWSSessionToken: {
 				Type:        schema.TypeString,
